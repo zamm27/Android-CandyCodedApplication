@@ -9,6 +9,8 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
+import java.net.URI;
+
 public class InfoActivity extends AppCompatActivity {
 
     @Override
@@ -26,6 +28,7 @@ public class InfoActivity extends AppCompatActivity {
 
     }
 
+
     // ***
     // TODO - Task 2 - Launch the Google Maps Activity
     // ***
@@ -41,4 +44,21 @@ public class InfoActivity extends AppCompatActivity {
     // ***
     // TODO - Task 3 - Launch the Phone Activity
     // ***
+
+    public void createPhoneIntent(View view){
+<<<<<<< HEAD
+=======
+            Intent phoneIntent = new Intent(Intent.ACTION_DIAL);
+            phoneIntent.setData(Uri.parse("tell:0123456789"));
+            startActivity(phoneIntent);
+        }
+>>>>>>> 3dd1e04bb96bbc7d25ef1cb532e31315c8cd4c7a
+        Intent phoneIntent = new Intent(Intent.ACTION_DIAL);
+        Intent intent = phoneIntent.setData(Uri.parse("tel:0123456789"));
+        startActivity(phoneIntent);
+    }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3dd1e04bb96bbc7d25ef1cb532e31315c8cd4c7a
 }
